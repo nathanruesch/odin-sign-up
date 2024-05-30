@@ -1,5 +1,17 @@
+@font-face {
+    font-family: NorseBold;
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+}
+
 :root {
     --info-container-size: 60vw;
+    --info-container-bg: rgb(244, 244, 244);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 #main-container {
@@ -23,27 +35,27 @@
     float: left;
     position: absolute;
     left: 0px;
-    top: 0px;
+    right: 0px;
+    top: 250px;
     z-index: 1000;
     background-color: rgba(0,0,0,0.4);
     padding: 5px;
     color: white;
     font-weight: bold;
     display: flex;
-    width: 100%;
-    height: 200px;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
 }
 
 #image-logo-header {
-    align-self: center;
-    height: 100%;
-    color: white;
+    font-family: 'NorseBold';
+    font-size: 7rem;
 }
 
 #image-logo {
     height: 100%;
-    align-self: center;
-    width:auto;
+    width: auto;
 }
 
 /* Info Section */
@@ -51,6 +63,72 @@
 #info-container {
     width: var(--info-container-size);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero-container {
+    background-color: var(--info-container-bg);
+    padding: 110px 140px 40px 50px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#form-container {
+    background-color: white;
+    box-shadow: 4px 4px 5px 1px #86A09F;
+    padding: 0px 130px 15px 50px;
+}
+
+#main-form {
+    display: flex;
+}
+
+#form-legend {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+
+.form-div input {
+    width: 60%;
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+.form-div label {
+    width: 60%;
+    height: 30px;
+    font-size: 20px;
+    padding-top: 5px;
+    margin-bottom: -12px;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+#footer-container {
+    background-color: var(--info-container-bg);
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+#footer-container button {
+    width: 240px;
+    height: 60px;
+    color: white;
+    background-color: #596D48;
+    border-radius: 14px;
+    font-size: 20px;
 }
 
 .italic-text {
