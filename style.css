@@ -1,7 +1,58 @@
 :root {
-
+    --info-container-size: 60vw;
 }
 
 #main-container {
-    
+    display: flex;
+}
+
+/* Image section */
+
+#image-container {
+    width: calc(100vw - var(--info-container-size));
+    height: 100vh;
+    position: relative;
+}
+
+#main-image {
+    width: 100%;
+    height: 100%;
+}
+
+#image-logo-container {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.4);
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    width: 100%;
+    height: 200px;
+}
+
+#image-logo-header {
+    align-self: center;
+    height: 100%;
+    color: white;
+}
+
+#image-logo {
+    height: 100%;
+    align-self: center;
+    width:auto;
+}
+
+/* Info Section */
+
+#info-container {
+    width: var(--info-container-size);
+    height: 100vh;
+}
+
+.italic-text {
+    font-style: italic;
 }
